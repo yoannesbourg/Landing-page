@@ -7,8 +7,8 @@ import { homepageData } from '../../../data/homepage';
 const Homepage = (): JSX.Element => {
     return (
         <>
-            {/* <CardsGrid cards={homepageData.cardsGrid} /> */}
             <CoverSection {...homepageData.coverSection} />
+            <CardsGrid cards={homepageData.cardsGrid} />
         </>
     );
 };
