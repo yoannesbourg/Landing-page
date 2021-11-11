@@ -1,4 +1,9 @@
 export const homepageData = {
+    coverSection: {
+        title: 'Lorem ipsum',
+        content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque lacus in cursus congue.',
+    },
     cardsGrid: [
         {
             title: 'Connecting People',
