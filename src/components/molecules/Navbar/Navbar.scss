@@ -1,0 +1,16 @@
+.navbar-wrapper {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%);
+    .navbar-links {
+        display: flex;
+        width: 70%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
