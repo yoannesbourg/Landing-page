@@ -1,0 +1,21 @@
+.footer-link-wrapper {
+    display: flex;
+    align-items: center;
+    .footer-link {
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #0A2540;
+        margin-right: 50px;
+        transition: ease-in-out .2s;
+        &:hover {
+            opacity: .5;
+        }
+    }
+    .separator {
+        width: 2px;
+        height: 20px;
+        background-color: #d6d7e5;
+        margin-right: 15px;
+    }
+}
