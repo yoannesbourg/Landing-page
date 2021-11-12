@@ -12,8 +12,8 @@ const Card = (props: CardProps): JSX.Element => {
     const { image, title, titleColor, content } = props;
     return (
         <div className="card-wrapper">
-            <SecondaryTitle title={title} color={titleColor} />
             <Avatar image={image && image} />
+            <SecondaryTitle title={title} color={titleColor} />
             <ParagraphSecondary content={content} />
         </div>
     );

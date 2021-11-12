@@ -8,10 +8,50 @@
     left: 50%;
     top: 0;
     transform: translate(-50%);
+    @media (max-width: 1187px) {
+        display: none;
+    }
+    .burguer-menu {
+        display: none;
+    }
     .navbar-links {
         display: flex;
         width: 70%;
         justify-content: flex-end;
         align-items: center;
+    }
+}
+
+.burguer-menu {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    width: 100%;
+    padding: 50px 0;
+    @media (min-width: 1187px) {
+        display: none;
+    }
+    .burguer-menu-icon {
+        text-align: left;
+        width: 80%;
+        margin: 0 auto;
+        svg {
+            transition: ease-in-out .2s;
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+    .burguer-menu-content {
+        .navbar-links {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .cta {
+            margin: 0 auto;
+        }
     }
 }

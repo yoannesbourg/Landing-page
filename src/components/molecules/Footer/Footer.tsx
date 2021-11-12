@@ -11,28 +11,32 @@ const Footer = (props: FooterProps): JSX.Element => {
     const { navLinks, cta } = props;
     return (
         <div className="footer-wrapper">
-            <a href="/">
-                <img src={FooterLogo} />
-            </a>
-            {navLinks.map((link, i) => {
-                if (i % 2 === 0) {
-                    if (navLinks[i + 1]) {
-                        return (
-                            <div>
-                                <FooterLink key={uuidv4()} {...navLinks[i]} />
-                                <FooterLink key={uuidv4()} {...navLinks[i + 1]} />
-                            </div>
-                        );
-                    } else {
-                        return (
-                            <div>
-                                <FooterLink key={uuidv4()} {...navLinks[i]} />
-                            </div>
-                        );
+            <div className="footer-content">
+                <a href="/" className="footer-logo">
+                    <img src={FooterLogo} />
+                </a>
+                {navLinks.map((link, i) => {
+                    if (i % 2 === 0) {
+                        if (navLinks[i + 1]) {
+                            return (
+                                <div>
+                                    <FooterLink key={uuidv4()} {...navLinks[i]} />
+                                    <FooterLink key={uuidv4()} {...navLinks[i + 1]} />
+                                </div>
+                            );
+                        } else {
+                            return (
+                                <div>
+                                    <FooterLink key={uuidv4()} {...navLinks[i]} />
+                                </div>
+                            );
+                        }
                     }
-                }
-            })}
-            <CTA {...cta} />
+                })}
+                <div className="cta-wrapper">
+                    <CTA {...cta} />
+                </div>
+            </div>
         </div>
     );
 };

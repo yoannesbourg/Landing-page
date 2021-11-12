@@ -4,12 +4,12 @@
     width: 80%;
     margin: 0 auto 109px auto;
     display: grid;
-    grid-template: auto / repeat(3, 350px);
+    grid-template: 437px / repeat(3, 364px);
     grid-gap: 16px;
     @media (max-width: 1200px) {
-        grid-template: auto / repeat(2, 300px);
+        grid-template: 437px / repeat(2, 364px);
     }
-    @media (max-width: 640px) {
-        grid-template: auto / repeat(1, 300px);
+    @media (max-width: 745px) {
+        grid-template: 437px / repeat(1, 364px);
     }
 }
