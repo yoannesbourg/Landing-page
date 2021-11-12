@@ -12,34 +12,36 @@ import './Navbar.scss';
 const Navbar = (props: NavbarProps): JSX.Element => {
     const { navLinks, cta } = props;
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const handleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const changeBackground = () => {
+        if (window.scrollY <= 153) {
+            setIsScrolled(false);
+        } else {
+            setIsScrolled(true);
+        }
+    };
+    window.addEventListener('scroll', changeBackground);
     return (
         <>
-            <div className={'navbar-wrapper'}>
-                <Logo />
-                <div className="navbar-links">
-                    {navLinks.map((link) => {
-                        return <NavLink key={uuidv4()} {...link} />;
-                    })}
-                    <CTA {...cta} />
+            <div className={isScrolled ? 'navbar-wrapper active' : 'navbar-wrapper'}>
+                <div className="navbar-content">
+                    <Logo />
+                    <div className="navbar-links">
+                        {navLinks.map((link) => {
+                            return <NavLink key={uuidv4()} {...link} />;
+                        })}
+                        <CTA {...cta} />
+                    </div>
                 </div>
             </div>
 
             <div className="burguer-menu" style={{ background: isMenuOpen ? '#184a7c' : 'transparent' }}>
                 <div className="burguer-menu-icon">
-                    <AiOutlineMenu
-                        style={{
-                            width: '30px',
-                            height: 'auto',
-                            backgroundColor: '#EF7D00',
-                            borderRadius: '8px',
-                            padding: '8px',
-                            cursor: 'pointer',
-                        }}
-                        onClick={handleMenu}
-                    />
+                    <AiOutlineMenu onClick={handleMenu} />
                 </div>
                 <div className="burguer-menu-content" style={{ display: isMenuOpen ? 'block' : 'none' }}>
                     <div className="navbar-links">
