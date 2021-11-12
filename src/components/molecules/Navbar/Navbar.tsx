@@ -27,6 +27,7 @@ const Navbar = (props: NavbarProps): JSX.Element => {
     window.addEventListener('scroll', changeBackground);
     return (
         <>
+            {/* Desktop Navbar */}
             <div className={isScrolled ? 'navbar-wrapper active' : 'navbar-wrapper'}>
                 <div className="navbar-content">
                     <Logo />
@@ -38,7 +39,7 @@ const Navbar = (props: NavbarProps): JSX.Element => {
                     </div>
                 </div>
             </div>
-
+            {/* Responsive Navbar */}
             <div className="burguer-menu" style={{ background: isMenuOpen ? '#184a7c' : 'transparent' }}>
                 <div className="burguer-menu-icon">
                     <AiOutlineMenu onClick={handleMenu} style={{ color: '#0A2540' }} />
