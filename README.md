@@ -6,8 +6,9 @@
 
 If you have a prettier issue, just run npm run lint-fix
 
+# The Project
 The main goal is to recreate an html + css template.
-More over I used:
+Moreover I used:
 
 - React
 - TypeScript
