@@ -1,4 +1,6 @@
-# Getting Started
+# Landing Page
+
+## Getting Started
 
 - Clone this project, 
 - npm install
@@ -6,7 +8,7 @@
 
 If you have a prettier issue, just run npm run lint-fix
 
-# The Project
+## The Project
 The main goal is to recreate an html + css template.
 Moreover I used:
 
