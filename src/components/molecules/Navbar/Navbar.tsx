@@ -41,7 +41,7 @@ const Navbar = (props: NavbarProps): JSX.Element => {
 
             <div className="burguer-menu" style={{ background: isMenuOpen ? '#184a7c' : 'transparent' }}>
                 <div className="burguer-menu-icon">
-                    <AiOutlineMenu onClick={handleMenu} />
+                    <AiOutlineMenu onClick={handleMenu} style={{ color: '#0A2540' }} />
                 </div>
                 <div className="burguer-menu-content" style={{ display: isMenuOpen ? 'block' : 'none' }}>
                     <div className="navbar-links">

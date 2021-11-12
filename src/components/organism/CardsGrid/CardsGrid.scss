@@ -1,3 +1,11 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 .cards-grid {
     display: flex;
     justify-content: center;
@@ -12,4 +20,6 @@
     @media (max-width: 745px) {
         grid-template: 437px / repeat(1, 364px);
     }
+    animation: ease-out 1s fadeIn;
+    transition-delay: 10s;
 }

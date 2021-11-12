@@ -1,4 +1,13 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 .cover-section {
+    animation: ease-out 1s fadeIn;
     height: 440px;
     display: flex;
     flex-direction: column;
